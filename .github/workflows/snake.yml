@@ -2,8 +2,8 @@ name: 🐍 Snake Contribution Graph
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # runs every day at 1:00 AM UTC
-  workflow_dispatch:        # allows manual trigger from Actions tab
+    - cron: "0 1 * * *"
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -12,6 +12,8 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write
 
     steps:
       - name: Generate Snake Animation
@@ -23,9 +25,8 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Push Output to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch: output
+          folder: dist
+          token: ${{ secrets.GITHUB_TOKEN }}
