@@ -10,97 +10,20 @@
 <!-- ╚══════════════════════════════════════════╝ -->
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/Jsher7/Jsher7/main/banner.jpg" width="100%" style="border-radius:16px; max-height:380px; object-fit:cover;" />
+</div>
 
-<svg width="900" height="380" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <!-- Clip the image to rounded rect -->
-    <clipPath id="bannerClip">
-      <rect width="896" height="376" x="2" y="2" rx="18"/>
-    </clipPath>
-    <!-- Dark gradient overlay so text is readable over photo -->
-    <linearGradient id="overlay" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0a0500;stop-opacity:0.92"/>
-      <stop offset="45%" style="stop-color:#0a0500;stop-opacity:0.75"/>
-      <stop offset="100%" style="stop-color:#0a0500;stop-opacity:0.20"/>
-    </linearGradient>
-    <!-- Amber glow border gradient -->
-    <linearGradient id="bannerBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1"/>
-      <stop offset="50%" style="stop-color:#d97706;stop-opacity:0.5"/>
-      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1"/>
-    </linearGradient>
-    <filter id="bannerGlow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="textGlow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="subtleGlow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
+<div align="center">
 
-  <!-- Outer glow border -->
-  <rect x="1" y="1" width="898" height="378" rx="18" fill="none"
-        stroke="url(#bannerBorder)" stroke-width="1.5" filter="url(#bannerGlow)"/>
-
-  <!-- Photo background -->
-  <image href="https://raw.githubusercontent.com/Jsher7/Jsher7/main/banner.jpg"
-         x="2" y="2" width="896" height="376"
-         preserveAspectRatio="xMidYMid slice"
-         clip-path="url(#bannerClip)"/>
-
-  <!-- Dark overlay (left-heavy so text pops) -->
-  <rect x="2" y="2" width="896" height="376" rx="18" fill="url(#overlay)" clip-path="url(#bannerClip)"/>
-
-  <!-- Top amber accent line -->
-  <rect x="2" y="2" width="896" height="3" rx="2" fill="url(#bannerBorder)"/>
-
-  <!-- Location pill -->
-  <rect x="48" y="46" width="188" height="24" rx="12"
-        fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
-  <text x="58" y="63" font-family="monospace" font-size="11" fill="#fbbf24" letter-spacing="1">📍 Kolkata, West Bengal, India</text>
-
-  <!-- Main name -->
-  <text x="48" y="140" font-family="Georgia, serif" font-size="58" font-weight="bold"
-        fill="#fbbf24" filter="url(#textGlow)" letter-spacing="-1">Ankush Sanyal</text>
-
-  <!-- Tagline -->
-  <text x="50" y="176" font-family="monospace" font-size="20" font-weight="bold"
-        fill="#f59e0b" filter="url(#subtleGlow)" letter-spacing="3">Code.  Capture.  Create.</text>
-
-  <!-- Thin amber divider -->
-  <line x1="48" y1="196" x2="440" y2="196" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1"/>
-
-  <!-- Role pills row 1 -->
-  <rect x="48" y="212" width="186" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="141" y="230" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">⚡ Full-Stack Developer</text>
-
-  <rect x="244" y="212" width="210" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="349" y="230" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">📸 Photographer &amp; Cinematographer</text>
-
-  <!-- Role pills row 2 -->
-  <rect x="48" y="248" width="224" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="160" y="266" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">🎬 Video Editor · DaVinci · CapCut</text>
-
-  <rect x="282" y="248" width="172" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="368" y="266" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">🤖 AI &amp; Web3 Builder</text>
-
-  <!-- Fun fact strip at bottom -->
-  <rect x="2" y="330" width="896" height="46" rx="0" fill="#0a0500" fill-opacity="0.82"/>
-  <rect x="2" y="373" width="896" height="5" rx="2" fill="url(#bannerBorder)"/>
-  <text x="450" y="349" font-family="monospace" font-size="11"
-        fill="#d97706" text-anchor="middle" letter-spacing="1">🃏  Jack of all trades, master of none — but oftentimes better than a master of one</text>
-  <text x="450" y="366" font-family="monospace" font-size="11"
-        fill="#92400e" text-anchor="middle">🎧  3am lo-fi sessions  →  golden hour reels 🌅  →  ships before breakfast ☕</text>
-</svg>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0,0d0500,1a0a00,2d1600,1a0a00,0d0500&height=110&text=Ankush%20Sanyal&fontSize=48&fontColor=fbbf24&fontAlignY=42&desc=Code.%20%20%20Capture.%20%20%20Create.&descSize=18&descAlignY=72&descColor=d97706&animation=fadeIn" width="100%" />
 
 </div>
 
-<br/>
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&duration=2600&pause=800&color=F59E0B&background=00000000&center=true&vCenter=true&width=800&lines=🚀+Full-Stack+Web+%26+Mobile+Developer;📸+Photographer+%26+Cinematographer;🎬+Video+Editor+—+DaVinci+·+Lightroom+·+CapCut;🤖+AI+%26+Web3+Builder;🎮+Chaos+Agent+%7C+Valorant+·+RDR2+·+God+of+War;🎧+3am+Lo-fi+Sessions+→+Ships+Before+Breakfast)](https://git.io/typing-svg)
+
+</div>
 
 <!-- ╔══════════════════════════════════════════╗ -->
 <!-- ║       SOCIAL BADGES                      ║ -->
