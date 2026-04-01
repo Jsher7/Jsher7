@@ -1,23 +1,102 @@
 <!-- ═══════════════════════════════════════════════════════════════
      ANKUSH SANYAL — @Jsher7
      Theme: Golden Hour · Elegant Dark · Charcoal + Amber/Gold
-     Glassmorphism · Cinematic · Self-updating via GitHub Actions
+     Glassmorphism · Cinematic Photo Banner · Self-updating
 ═══════════════════════════════════════════════════════════════ -->
 
 
 <!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 1 — CINEMATIC GIF INTRO        ║ -->
+<!-- ║     BLOCK 1 — CINEMATIC PHOTO BANNER     ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0,1a0a00,2d1600,3d2b00,1a1a00,0d0d0d&height=280&section=header&text=Ankush%20Sanyal&fontSize=72&fontColor=f59e0b&fontAlignY=52&desc=Code.%20%20Capture.%20%20Create.&descSize=24&descAlignY=72&descColor=fbbf24&animation=fadeIn&stroke=d97706&strokeWidth=2" width="100%"/>
+<svg width="900" height="380" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Clip the image to rounded rect -->
+    <clipPath id="bannerClip">
+      <rect width="896" height="376" x="2" y="2" rx="18"/>
+    </clipPath>
+    <!-- Dark gradient overlay so text is readable over photo -->
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0a0500;stop-opacity:0.92"/>
+      <stop offset="45%" style="stop-color:#0a0500;stop-opacity:0.75"/>
+      <stop offset="100%" style="stop-color:#0a0500;stop-opacity:0.20"/>
+    </linearGradient>
+    <!-- Amber glow border gradient -->
+    <linearGradient id="bannerBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#d97706;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="bannerGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="subtleGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
 
-</div>
+  <!-- Outer glow border -->
+  <rect x="1" y="1" width="898" height="378" rx="18" fill="none"
+        stroke="url(#bannerBorder)" stroke-width="1.5" filter="url(#bannerGlow)"/>
 
-<div align="center">
+  <!-- Photo background -->
+  <image href="https://raw.githubusercontent.com/Jsher7/Jsher7/main/banner.jpg"
+         x="2" y="2" width="896" height="376"
+         preserveAspectRatio="xMidYMid slice"
+         clip-path="url(#bannerClip)"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2600&pause=800&color=F59E0B&background=00000000&center=true&vCenter=true&width=800&lines=🚀+Full-Stack+Web+%26+Mobile+Developer;📸+Photographer+%26+Cinematographer;🎬+Video+Editor+—+DaVinci+·+Lightroom+·+CapCut;🤖+AI+%26+Web3+Builder;🎮+Chaos+Agent+%7C+Valorant+·+RDR2+·+God+of+War;🎧+3am+Lo-fi+Sessions+→+Ships+Before+Breakfast)](https://git.io/typing-svg)
+  <!-- Dark overlay (left-heavy so text pops) -->
+  <rect x="2" y="2" width="896" height="376" rx="18" fill="url(#overlay)" clip-path="url(#bannerClip)"/>
+
+  <!-- Top amber accent line -->
+  <rect x="2" y="2" width="896" height="3" rx="2" fill="url(#bannerBorder)"/>
+
+  <!-- Location pill -->
+  <rect x="48" y="46" width="188" height="24" rx="12"
+        fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="58" y="63" font-family="monospace" font-size="11" fill="#fbbf24" letter-spacing="1">📍 Kolkata, West Bengal, India</text>
+
+  <!-- Main name -->
+  <text x="48" y="140" font-family="Georgia, serif" font-size="58" font-weight="bold"
+        fill="#fbbf24" filter="url(#textGlow)" letter-spacing="-1">Ankush Sanyal</text>
+
+  <!-- Tagline -->
+  <text x="50" y="176" font-family="monospace" font-size="20" font-weight="bold"
+        fill="#f59e0b" filter="url(#subtleGlow)" letter-spacing="3">Code.  Capture.  Create.</text>
+
+  <!-- Thin amber divider -->
+  <line x1="48" y1="196" x2="440" y2="196" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- Role pills row 1 -->
+  <rect x="48" y="212" width="186" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="141" y="230" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">⚡ Full-Stack Developer</text>
+
+  <rect x="244" y="212" width="210" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="349" y="230" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">📸 Photographer &amp; Cinematographer</text>
+
+  <!-- Role pills row 2 -->
+  <rect x="48" y="248" width="224" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="160" y="266" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">🎬 Video Editor · DaVinci · CapCut</text>
+
+  <rect x="282" y="248" width="172" height="26" rx="13" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="368" y="266" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">🤖 AI &amp; Web3 Builder</text>
+
+  <!-- Fun fact strip at bottom -->
+  <rect x="2" y="330" width="896" height="46" rx="0" fill="#0a0500" fill-opacity="0.82"/>
+  <rect x="2" y="373" width="896" height="5" rx="2" fill="url(#bannerBorder)"/>
+  <text x="450" y="349" font-family="monospace" font-size="11"
+        fill="#d97706" text-anchor="middle" letter-spacing="1">🃏  Jack of all trades, master of none — but oftentimes better than a master of one</text>
+  <text x="450" y="366" font-family="monospace" font-size="11"
+        fill="#92400e" text-anchor="middle">🎧  3am lo-fi sessions  →  golden hour reels 🌅  →  ships before breakfast ☕</text>
+</svg>
 
 </div>
 
@@ -47,95 +126,33 @@
 ---
 
 <!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 2 — GLASSMORPHISM ABOUT CARD   ║ -->
+<!-- ║     BLOCK 2 — PROFILE SUMMARY CARDS      ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 
-<h2 align="center">🧙 &nbsp; Character Sheet</h2>
+<h2 align="center">📋 &nbsp; Profile Summary</h2>
 
 <div align="center">
 
-<!--  Glassmorphism About Card via SVG  -->
-<svg width="860" height="420" viewBox="0 0 860 420" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a0f00;stop-opacity:0.95"/>
-      <stop offset="50%" style="stop-color:#2d1a00;stop-opacity:0.90"/>
-      <stop offset="100%" style="stop-color:#1a1a0a;stop-opacity:0.95"/>
-    </linearGradient>
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1"/>
-      <stop offset="50%" style="stop-color:#d97706;stop-opacity:0.6"/>
-      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1"/>
-    </linearGradient>
-    <linearGradient id="tagBg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.25"/>
-      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.1"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="cardClip">
-      <rect width="856" height="416" x="2" y="2" rx="20"/>
-    </clipPath>
-  </defs>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Jsher7&theme=github_dark" width="100%"/>
 
-  <!-- Outer glow border -->
-  <rect width="856" height="416" x="2" y="2" rx="20" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" filter="url(#glow)"/>
-  <!-- Card background -->
-  <rect width="856" height="416" x="2" y="2" rx="20" fill="url(#cardBg)"/>
-  <!-- Top accent line -->
-  <rect x="2" y="2" width="856" height="3" rx="2" fill="url(#borderGrad)"/>
+<br/>
 
-  <!-- Left column: Identity -->
-  <text x="48" y="58" font-family="monospace" font-size="11" fill="#f59e0b" opacity="0.7" letter-spacing="3">// IDENTITY</text>
-  <text x="48" y="88" font-family="monospace" font-size="22" font-weight="bold" fill="#fbbf24" filter="url(#glow)">Ankush Sanyal</text>
-  <text x="48" y="112" font-family="monospace" font-size="13" fill="#d97706">@Jsher7  ·  @jungleesher7</text>
-  <text x="48" y="134" font-family="monospace" font-size="12" fill="#92400e">📍 Kolkata, West Bengal, India</text>
-
-  <!-- Divider -->
-  <line x1="48" y1="150" x2="380" y2="150" stroke="#f59e0b" stroke-opacity="0.2" stroke-width="1"/>
-
-  <!-- Roles -->
-  <text x="48" y="175" font-family="monospace" font-size="11" fill="#f59e0b" opacity="0.7" letter-spacing="3">// ROLES</text>
-  <rect x="48" y="186" width="240" height="24" rx="6" fill="url(#tagBg)"/>
-  <text x="58" y="203" font-family="monospace" font-size="12" fill="#fbbf24">⚡ Full-Stack Developer</text>
-  <rect x="48" y="216" width="270" height="24" rx="6" fill="url(#tagBg)"/>
-  <text x="58" y="233" font-family="monospace" font-size="12" fill="#fbbf24">📸 Photographer &amp; Cinematographer</text>
-  <rect x="48" y="246" width="300" height="24" rx="6" fill="url(#tagBg)"/>
-  <text x="58" y="263" font-family="monospace" font-size="12" fill="#fbbf24">🎬 Video Editor · DaVinci · CapCut Pro</text>
-  <rect x="48" y="276" width="220" height="24" rx="6" fill="url(#tagBg)"/>
-  <text x="58" y="293" font-family="monospace" font-size="12" fill="#fbbf24">🤖 AI &amp; Web3 Builder</text>
-  <rect x="48" y="306" width="255" height="24" rx="6" fill="url(#tagBg)"/>
-  <text x="58" y="323" font-family="monospace" font-size="12" fill="#fbbf24">🎮 Chaos Agent &amp; Occasional Gamer</text>
-
-  <!-- Vertical divider -->
-  <line x1="420" y1="30" x2="420" y2="390" stroke="#f59e0b" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4,4"/>
-
-  <!-- Right column -->
-  <text x="450" y="58" font-family="monospace" font-size="11" fill="#f59e0b" opacity="0.7" letter-spacing="3">// CURRENT QUEST</text>
-  <rect x="450" y="66" width="370" height="68" rx="10" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1"/>
-  <text x="466" y="88" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24">⚔️  ScamShield</text>
-  <text x="466" y="106" font-family="monospace" font-size="11" fill="#d97706">AI-powered scam detection platform</text>
-  <text x="466" y="122" font-family="monospace" font-size="11" fill="#92400e">Next.js · FastAPI · MongoDB · Docker</text>
-
-  <text x="450" y="168" font-family="monospace" font-size="11" fill="#f59e0b" opacity="0.7" letter-spacing="3">// LEARNING NOW</text>
-  <text x="450" y="190" font-family="monospace" font-size="12" fill="#d97706">→  LLM Fine-tuning &amp; Prompt Engineering</text>
-  <text x="450" y="210" font-family="monospace" font-size="12" fill="#d97706">→  Web3 / Solidity Smart Contracts</text>
-  <text x="450" y="230" font-family="monospace" font-size="12" fill="#d97706">→  Advanced 3D with Three.js &amp; WebGL</text>
-
-  <line x1="450" y1="248" x2="800" y2="248" stroke="#f59e0b" stroke-opacity="0.2" stroke-width="1"/>
-
-  <text x="450" y="272" font-family="monospace" font-size="11" fill="#f59e0b" opacity="0.7" letter-spacing="3">// VIBE</text>
-  <text x="450" y="294" font-family="monospace" font-size="12" fill="#d97706">🎧  3am lo-fi  →  golden hour reels 🌅</text>
-  <text x="450" y="314" font-family="monospace" font-size="12" fill="#d97706">☕  ships before breakfast</text>
-
-  <line x1="450" y1="332" x2="800" y2="332" stroke="#f59e0b" stroke-opacity="0.2" stroke-width="1"/>
-
-  <text x="450" y="356" font-family="monospace" font-size="11" fill="#f59e0b" opacity="0.7" letter-spacing="3">// FUN FACT</text>
-  <text x="450" y="378" font-family="monospace" font-size="11" fill="#78350f">🃏  Jack of all trades, master of none —</text>
-  <text x="450" y="396" font-family="monospace" font-size="11" fill="#78350f">     but oftentimes better than a master of one.</text>
-</svg>
+<table border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Jsher7&theme=github_dark"/>
+    </td>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Jsher7&theme=github_dark"/>
+    </td>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Jsher7&theme=github_dark"/>
+    </td>
+    <td>
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Jsher7&theme=github_dark&utcOffset=5.5"/>
+    </td>
+  </tr>
+</table>
 
 </div>
 
@@ -144,7 +161,40 @@
 ---
 
 <!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 3 — SKILL ARSENAL              ║ -->
+<!-- ║     BLOCK 3 — GLASSMORPHISM STATS        ║ -->
+<!-- ╚══════════════════════════════════════════╝ -->
+
+<h2 align="center">📊 &nbsp; Chronicle Stats</h2>
+
+<div align="center">
+
+<table border="0" cellpadding="6" cellspacing="0">
+  <tr>
+    <td align="center">
+      <img height="175" src="https://github-readme-stats.vercel.app/api?username=Jsher7&show_icons=true&theme=dark&bg_color=0d1117&title_color=f59e0b&icon_color=d97706&text_color=e5c687&border_color=2d2d1a&border_radius=12&include_all_commits=true&count_private=true" />
+    </td>
+    <td align="center">
+      <img height="175" src="https://github-readme-streak-stats.herokuapp.com?user=Jsher7&theme=dark&background=0d1117&border=2d2d1a&ring=f59e0b&fire=d97706&currStreakNum=e5c687&sideNums=e5c687&currStreakLabel=f59e0b&sideLabels=a38850&dates=6b6040&border_radius=12" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jsher7&layout=donut&theme=dark&bg_color=0d1117&title_color=f59e0b&text_color=e5c687&border_color=2d2d1a&border_radius=12&langs_count=8&hide=jupyter%20notebook" />
+    </td>
+    <td align="center">
+      <img height="175" src="https://github-readme-activity-graph.vercel.app/graph?username=Jsher7&bg_color=0d1117&color=f59e0b&line=d97706&point=fbbf24&area=true&area_color=2d1f00&hide_border=false&border_color=2d2d1a&radius=12&custom_title=Contribution+Activity" />
+    </td>
+  </tr>
+</table>
+
+</div>
+
+<br/>
+
+---
+
+<!-- ╔══════════════════════════════════════════╗ -->
+<!-- ║     BLOCK 4 — SKILL ARSENAL              ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 
 <h2 align="center">⚔️ &nbsp; Skill Arsenal</h2>
@@ -155,22 +205,19 @@
 <tr>
 <td align="center" valign="top">
 
-**◈ Languages ◈**
-<br/>
+**◈ Languages ◈**<br/>
 <img src="https://skillicons.dev/icons?i=ts,js,py,java,c,bash,html,css&theme=dark&perline=4" />
 
 </td>
 <td align="center" valign="top">
 
-**◈ Frontend & 3D ◈**
-<br/>
+**◈ Frontend & 3D ◈**<br/>
 <img src="https://skillicons.dev/icons?i=react,nextjs,vue,angular,threejs,tailwind,redux,vite&theme=dark&perline=4" />
 
 </td>
 <td align="center" valign="top">
 
-**◈ Backend ◈**
-<br/>
+**◈ Backend ◈**<br/>
 <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django,flask,spring,nginx,docker&theme=dark&perline=4" />
 
 </td>
@@ -178,22 +225,19 @@
 <tr>
 <td align="center" valign="top">
 
-**◈ Mobile & Desktop ◈**
-<br/>
+**◈ Mobile ◈**<br/>
 <img src="https://skillicons.dev/icons?i=flutter,react,electron&theme=dark&perline=4" />
 
 </td>
 <td align="center" valign="top">
 
-**◈ Databases & Cloud ◈**
-<br/>
+**◈ Databases & Cloud ◈**<br/>
 <img src="https://skillicons.dev/icons?i=mongodb,redis,supabase,postgres,vercel,netlify,github,git&theme=dark&perline=4" />
 
 </td>
 <td align="center" valign="top">
 
-**◈ AI/ML & Design ◈**
-<br/>
+**◈ AI/ML & Design ◈**<br/>
 <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,figma,ps&theme=dark&perline=4" />
 
 </td>
@@ -207,113 +251,66 @@
 ---
 
 <!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 4 — LIVE STATS DASHBOARD       ║ -->
-<!-- ╚══════════════════════════════════════════╝ -->
-
-<h2 align="center">📊 &nbsp; Chronicle Stats</h2>
-
-<div align="center">
-
-<table border="0" cellpadding="6" cellspacing="0">
-  <tr>
-    <td align="center">
-      <img height="180" src="https://github-readme-stats.vercel.app/api?username=Jsher7&show_icons=true&theme=dark&bg_color=0d1117&title_color=f59e0b&icon_color=d97706&text_color=e5c687&border_color=2d2d1a&border_radius=12&include_all_commits=true&count_private=true" />
-    </td>
-    <td align="center">
-      <img height="180" src="https://github-readme-streak-stats.herokuapp.com?user=Jsher7&theme=dark&background=0d1117&border=2d2d1a&ring=f59e0b&fire=d97706&currStreakNum=e5c687&sideNums=e5c687&currStreakLabel=f59e0b&sideLabels=a38850&dates=6b6040&border_radius=12" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jsher7&layout=donut&theme=dark&bg_color=0d1117&title_color=f59e0b&text_color=e5c687&border_color=2d2d1a&border_radius=12&langs_count=8&hide=jupyter%20notebook" />
-    </td>
-    <td align="center">
-      <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Jsher7&theme=github_dark&utcOffset=5.5" />
-    </td>
-  </tr>
-</table>
-
-</div>
-
-<br/>
-
-<div align="center">
-
-[![Ankush's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Jsher7&bg_color=0d1117&color=f59e0b&line=d97706&point=f59e0b&area=true&area_color=2d1f00&hide_border=false&border_color=2d2d1a&radius=12&custom_title=Ankush%27s%20Contribution%20Chronicle)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
-<br/>
-
----
-
-<!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 5 — ACTIVE QUEST (GLASS CARD)  ║ -->
+<!-- ║     BLOCK 5 — ACTIVE QUEST               ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 
 <h2 align="center">🗺️ &nbsp; Active Quest</h2>
 
 <div align="center">
 
-<svg width="720" height="180" viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg">
+<svg width="760" height="178" viewBox="0 0 760 178" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="questBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="qBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a0f00;stop-opacity:0.98"/>
       <stop offset="100%" style="stop-color:#2d1a00;stop-opacity:0.95"/>
     </linearGradient>
-    <linearGradient id="questBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="qBorder" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#f59e0b"/>
       <stop offset="50%" style="stop-color:#fbbf24"/>
       <stop offset="100%" style="stop-color:#f59e0b"/>
     </linearGradient>
-    <filter id="questGlow">
+    <filter id="qGlow">
       <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
       <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-  <!-- Border glow -->
-  <rect x="1" y="1" width="718" height="178" rx="16" fill="none" stroke="url(#questBorder)" stroke-width="1.5" filter="url(#questGlow)"/>
-  <!-- Background -->
-  <rect x="1" y="1" width="718" height="178" rx="16" fill="url(#questBg)"/>
-  <!-- Top accent -->
-  <rect x="1" y="1" width="718" height="3" rx="2" fill="url(#questBorder)"/>
-  <!-- Left status bar -->
-  <rect x="1" y="1" width="5" height="178" rx="3" fill="#f59e0b"/>
+  <rect x="1" y="1" width="758" height="176" rx="16" fill="none" stroke="url(#qBorder)" stroke-width="1.5" filter="url(#qGlow)"/>
+  <rect x="1" y="1" width="758" height="176" rx="16" fill="url(#qBg)"/>
+  <rect x="1" y="1" width="758" height="3" rx="2" fill="url(#qBorder)"/>
+  <rect x="1" y="1" width="5" height="176" rx="3" fill="#f59e0b"/>
 
-  <!-- Shield icon area -->
-  <rect x="24" y="30" width="56" height="56" rx="12" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="52" y="66" font-family="monospace" font-size="28" text-anchor="middle">🛡️</text>
+  <!-- Shield -->
+  <rect x="22" y="28" width="58" height="58" rx="12" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="51" y="65" font-family="monospace" font-size="28" text-anchor="middle">🛡️</text>
 
-  <!-- Content -->
-  <text x="100" y="50" font-family="monospace" font-size="18" font-weight="bold" fill="#fbbf24" filter="url(#questGlow)">ScamShield</text>
-  <text x="100" y="70" font-family="monospace" font-size="12" fill="#d97706">AI-powered scam detection — emails · websites · jobs · SMS</text>
+  <!-- Title + desc -->
+  <text x="98" y="48" font-family="monospace" font-size="18" font-weight="bold" fill="#fbbf24" filter="url(#qGlow)">ScamShield</text>
+  <text x="98" y="66" font-family="monospace" font-size="11" fill="#d97706">AI-powered scam detection — emails · websites · jobs · SMS</text>
 
   <!-- Stack pills -->
-  <rect x="100" y="82" width="68" height="20" rx="10" fill="#f59e0b" fill-opacity="0.2"/>
-  <text x="134" y="96" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Next.js</text>
-  <rect x="176" y="82" width="60" height="20" rx="10" fill="#f59e0b" fill-opacity="0.2"/>
-  <text x="206" y="96" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">FastAPI</text>
-  <rect x="244" y="82" width="60" height="20" rx="10" fill="#f59e0b" fill-opacity="0.2"/>
-  <text x="274" y="96" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">MongoDB</text>
-  <rect x="312" y="82" width="52" height="20" rx="10" fill="#f59e0b" fill-opacity="0.2"/>
-  <text x="338" y="96" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Docker</text>
-  <rect x="372" y="82" width="56" height="20" rx="10" fill="#f59e0b" fill-opacity="0.2"/>
-  <text x="400" y="96" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Python</text>
+  <rect x="98" y="76" width="68" height="20" rx="10" fill="#f59e0b" fill-opacity="0.18"/>
+  <text x="132" y="90" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Next.js</text>
+  <rect x="174" y="76" width="60" height="20" rx="10" fill="#f59e0b" fill-opacity="0.18"/>
+  <text x="204" y="90" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">FastAPI</text>
+  <rect x="242" y="76" width="62" height="20" rx="10" fill="#f59e0b" fill-opacity="0.18"/>
+  <text x="273" y="90" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">MongoDB</text>
+  <rect x="312" y="76" width="52" height="20" rx="10" fill="#f59e0b" fill-opacity="0.18"/>
+  <text x="338" y="90" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Docker</text>
+  <rect x="372" y="76" width="54" height="20" rx="10" fill="#f59e0b" fill-opacity="0.18"/>
+  <text x="399" y="90" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Python</text>
 
-  <!-- Status + Difficulty on right -->
-  <text x="560" y="44" font-family="monospace" font-size="10" fill="#f59e0b" opacity="0.6" letter-spacing="2">STATUS</text>
-  <text x="560" y="62" font-family="monospace" font-size="13" fill="#fbbf24">🟡  In Development</text>
+  <!-- Right side -->
+  <text x="580" y="42" font-family="monospace" font-size="10" fill="#f59e0b" opacity="0.6" letter-spacing="2">STATUS</text>
+  <text x="580" y="60" font-family="monospace" font-size="13" fill="#fbbf24">🟡  In Development</text>
+  <text x="580" y="88" font-family="monospace" font-size="10" fill="#f59e0b" opacity="0.6" letter-spacing="2">DIFFICULTY</text>
+  <text x="580" y="106" font-family="monospace" font-size="14" fill="#f59e0b">★★★★☆</text>
+  <text x="580" y="128" font-family="monospace" font-size="10" fill="#f59e0b" opacity="0.6" letter-spacing="2">XP REWARD</text>
+  <text x="580" y="146" font-family="monospace" font-size="13" fill="#fbbf24">+2500 XP</text>
 
-  <text x="560" y="90" font-family="monospace" font-size="10" fill="#f59e0b" opacity="0.6" letter-spacing="2">DIFFICULTY</text>
-  <text x="560" y="108" font-family="monospace" font-size="14" fill="#f59e0b">★★★★☆</text>
-
-  <text x="560" y="130" font-family="monospace" font-size="10" fill="#f59e0b" opacity="0.6" letter-spacing="2">REWARD</text>
-  <text x="560" y="148" font-family="monospace" font-size="13" fill="#fbbf24">+2500 XP</text>
-
-  <!-- XP Progress bar -->
-  <rect x="24" y="138" width="500" height="8" rx="4" fill="#1a0f00" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1"/>
-  <rect x="24" y="138" width="220" height="8" rx="4" fill="url(#questBorder)"/>
-  <text x="24" y="162" font-family="monospace" font-size="10" fill="#92400e">PROGRESS ████████████░░░░░░░░░░░  44%  —  Keep building, hero.</text>
+  <!-- XP bar -->
+  <rect x="22" y="136" width="530" height="8" rx="4" fill="#1a0f00" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="22" y="136" width="234" height="8" rx="4" fill="url(#qBorder)"/>
+  <text x="22" y="158" font-family="monospace" font-size="10" fill="#92400e">PROGRESS  ████████████░░░░░░░░░░░  44%  —  Keep building, hero.</text>
 </svg>
 
 </div>
@@ -323,22 +320,118 @@
 ---
 
 <!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 6 — QUEST LOG                  ║ -->
+<!-- ║     BLOCK 6 — FEATURED PROJECTS          ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 
-<h2 align="center">📜 &nbsp; Quest Log</h2>
+<h2 align="center">🚀 &nbsp; Featured Projects</h2>
 
 <div align="center">
 
-<a href="https://github.com/Jsher7/scamshield">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Jsher7&repo=scamshield&theme=dark&bg_color=0d1117&title_color=f59e0b&icon_color=d97706&text_color=e5c687&border_color=2d2d1a&border_radius=12" />
-</a>
+<svg width="860" height="560" viewBox="0 0 860 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#110900;stop-opacity:0.98"/>
+      <stop offset="100%" style="stop-color:#1e1200;stop-opacity:0.96"/>
+    </linearGradient>
+    <linearGradient id="projBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.7"/>
+      <stop offset="50%" style="stop-color:#fbbf24;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.7"/>
+    </linearGradient>
+    <filter id="projGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
 
-<br/><br/>
+  <!-- ── CARD 1: ScamShield (top left) ── -->
+  <rect x="10" y="10" width="410" height="250" rx="14" fill="url(#projBg)" stroke="url(#projBorder)" stroke-width="1.2" filter="url(#projGlow)"/>
+  <rect x="10" y="10" width="410" height="4" rx="2" fill="#f59e0b"/>
+  <!-- icon + title -->
+  <text x="30" y="52" font-family="monospace" font-size="22">🛡️</text>
+  <text x="60" y="52" font-family="monospace" font-size="16" font-weight="bold" fill="#fbbf24">ScamShield</text>
+  <!-- desc -->
+  <text x="30" y="80" font-family="monospace" font-size="11" fill="#d97706">AI-powered platform detecting scam emails,</text>
+  <text x="30" y="96" font-family="monospace" font-size="11" fill="#d97706">fraudulent websites, fake jobs &amp; SMS in</text>
+  <text x="30" y="112" font-family="monospace" font-size="11" fill="#d97706">real-time — protecting users from deception.</text>
+  <!-- tech pills -->
+  <rect x="30" y="128" width="76" height="20" rx="10" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="68" y="142" font-family="monospace" font-size="10" fill="#93c5fd" text-anchor="middle">TypeScript</text>
+  <rect x="114" y="128" width="58" height="20" rx="10" fill="#3b7a3b" fill-opacity="0.25" stroke="#4ade80" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="143" y="142" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle">Python</text>
+  <rect x="180" y="128" width="64" height="20" rx="10" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="212" y="142" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">FastAPI</text>
+  <rect x="252" y="128" width="66" height="20" rx="10" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="285" y="142" font-family="monospace" font-size="10" fill="#6ee7b7" text-anchor="middle">MongoDB</text>
+  <!-- difficulty + stars row -->
+  <text x="30" y="178" font-family="monospace" font-size="11" fill="#92400e">Difficulty: ★★★★☆  ·  XP: +2500</text>
+  <!-- view repo button -->
+  <rect x="30" y="198" width="120" height="32" rx="8" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="90" y="219" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">⚡ View Repo</text>
 
-> 🔎 *More quests incoming — watch this space*
+  <!-- ── CARD 2: Adhikar Hain (top right) ── -->
+  <rect x="440" y="10" width="410" height="250" rx="14" fill="url(#projBg)" stroke="url(#projBorder)" stroke-width="1.2" filter="url(#projGlow)"/>
+  <rect x="440" y="10" width="410" height="4" rx="2" fill="#f59e0b"/>
+  <text x="460" y="52" font-family="monospace" font-size="22">⚖️</text>
+  <text x="490" y="52" font-family="monospace" font-size="16" font-weight="bold" fill="#fbbf24">Adhikar Hain</text>
+  <text x="460" y="80" font-family="monospace" font-size="11" fill="#d97706">Full-stack platform helping citizens identify</text>
+  <text x="460" y="96" font-family="monospace" font-size="11" fill="#d97706">wrongful welfare exclusions, understand why,</text>
+  <text x="460" y="112" font-family="monospace" font-size="11" fill="#d97706">and take legal action — automatically.</text>
+  <!-- pills -->
+  <rect x="460" y="128" width="76" height="20" rx="10" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="498" y="142" font-family="monospace" font-size="10" fill="#93c5fd" text-anchor="middle">TypeScript</text>
+  <rect x="544" y="128" width="58" height="20" rx="10" fill="#3b7a3b" fill-opacity="0.25" stroke="#4ade80" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="573" y="142" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle">Python</text>
+  <rect x="610" y="128" width="74" height="20" rx="10" fill="#8b5cf6" fill-opacity="0.25" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="647" y="142" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">Full-Stack</text>
+  <text x="460" y="178" font-family="monospace" font-size="11" fill="#92400e">Difficulty: ★★★★★  ·  XP: +3500</text>
+  <rect x="460" y="198" width="120" height="32" rx="8" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="520" y="219" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">⚡ View Repo</text>
+
+  <!-- ── CARD 3: Paathsala (bottom left) ── -->
+  <rect x="10" y="290" width="410" height="250" rx="14" fill="url(#projBg)" stroke="url(#projBorder)" stroke-width="1.2" filter="url(#projGlow)"/>
+  <rect x="10" y="290" width="410" height="4" rx="2" fill="#f59e0b"/>
+  <text x="30" y="332" font-family="monospace" font-size="22">📚</text>
+  <text x="60" y="332" font-family="monospace" font-size="16" font-weight="bold" fill="#fbbf24">Paathsala</text>
+  <text x="30" y="360" font-family="monospace" font-size="11" fill="#d97706">Comprehensive education platform with secure</text>
+  <text x="30" y="376" font-family="monospace" font-size="11" fill="#d97706">auth, smart routines, lab assignments, exams,</text>
+  <text x="30" y="392" font-family="monospace" font-size="11" fill="#d97706">and AI mentoring for students.</text>
+  <!-- pills -->
+  <rect x="30" y="408" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.25" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="68" y="422" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">JavaScript</text>
+  <rect x="114" y="408" width="40" height="20" rx="10" fill="#ec4899" fill-opacity="0.20" stroke="#ec4899" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="134" y="422" font-family="monospace" font-size="10" fill="#f9a8d4" text-anchor="middle">CSS</text>
+  <rect x="162" y="408" width="46" height="20" rx="10" fill="#ef4444" fill-opacity="0.20" stroke="#ef4444" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="185" y="422" font-family="monospace" font-size="10" fill="#fca5a5" text-anchor="middle">HTML</text>
+  <rect x="216" y="408" width="40" height="20" rx="10" fill="#8b5cf6" fill-opacity="0.20" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="236" y="422" font-family="monospace" font-size="10" fill="#c4b5fd" text-anchor="middle">AI</text>
+  <text x="30" y="458" font-family="monospace" font-size="11" fill="#92400e">Difficulty: ★★★☆☆  ·  XP: +1800</text>
+  <rect x="30" y="478" width="120" height="32" rx="8" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="90" y="499" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">⚡ View Repo</text>
+
+  <!-- ── CARD 4: Women's Day Marketplace (bottom right) ── -->
+  <rect x="440" y="290" width="410" height="250" rx="14" fill="url(#projBg)" stroke="url(#projBorder)" stroke-width="1.2" filter="url(#projGlow)"/>
+  <rect x="440" y="290" width="410" height="4" rx="2" fill="#f59e0b"/>
+  <text x="460" y="332" font-family="monospace" font-size="22">🌸</text>
+  <text x="490" y="332" font-family="monospace" font-size="16" font-weight="bold" fill="#fbbf24">Women's Day Market</text>
+  <text x="460" y="360" font-family="monospace" font-size="11" fill="#d97706">Marketplace for elderly women to showcase</text>
+  <text x="460" y="376" font-family="monospace" font-size="11" fill="#d97706">and sell their skills — bridging the gap</text>
+  <text x="460" y="392" font-family="monospace" font-size="11" fill="#d97706">between talent and technology access.</text>
+  <!-- pills -->
+  <rect x="460" y="408" width="76" height="20" rx="10" fill="#f59e0b" fill-opacity="0.25" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="498" y="422" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle">JavaScript</text>
+  <rect x="544" y="408" width="58" height="20" rx="10" fill="#3b7a3b" fill-opacity="0.25" stroke="#4ade80" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="573" y="422" font-family="monospace" font-size="10" fill="#86efac" text-anchor="middle">Python</text>
+  <rect x="610" y="408" width="56" height="20" rx="10" fill="#06b6d4" fill-opacity="0.20" stroke="#06b6d4" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="638" y="422" font-family="monospace" font-size="10" fill="#67e8f9" text-anchor="middle">Docker</text>
+  <text x="460" y="458" font-family="monospace" font-size="11" fill="#92400e">Difficulty: ★★★★☆  ·  XP: +2200</text>
+  <rect x="460" y="478" width="120" height="32" rx="8" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="520" y="499" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">⚡ View Repo</text>
+</svg>
 
 </div>
+
+> 💡 *Click the repo names above to visit — replace SVG href values with actual repo URLs once public*
 
 <br/>
 
@@ -364,10 +457,9 @@
 
 <br/>
 
-<!-- Trophies — using github-profile-trophy with working theme -->
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=Jsher7&theme=onedark&column=4&margin-w=12&margin-h=12&no-bg=false&no-frame=false&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" />
+<img src="https://github-profile-trophy.vercel.app/?username=Jsher7&theme=onedark&column=4&margin-w=12&margin-h=12&no-bg=false&no-frame=false" />
 
 </div>
 
@@ -376,7 +468,7 @@
 ---
 
 <!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 8 — BEYOND THE CODE (GLASS)    ║ -->
+<!-- ║     BLOCK 8 — BEYOND THE CODE            ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 
 <h2 align="center">🎬 &nbsp; Beyond the Code</h2>
@@ -385,61 +477,55 @@
 
 <svg width="860" height="220" viewBox="0 0 860 220" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="beyondBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a0f00;stop-opacity:0.95"/>
       <stop offset="100%" style="stop-color:#2d1a00;stop-opacity:0.90"/>
     </linearGradient>
-    <linearGradient id="panelBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="beyondBorder" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.8"/>
       <stop offset="50%" style="stop-color:#fbbf24;stop-opacity:0.4"/>
       <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.8"/>
     </linearGradient>
-    <filter id="panelGlow">
+    <filter id="beyondGlow">
       <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
       <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
+  <rect x="1" y="1" width="858" height="218" rx="18" fill="none" stroke="url(#beyondBorder)" stroke-width="1.5" filter="url(#beyondGlow)"/>
+  <rect x="1" y="1" width="858" height="218" rx="18" fill="url(#beyondBg)"/>
+  <rect x="1" y="1" width="858" height="3" rx="2" fill="url(#beyondBorder)"/>
 
-  <!-- Outer card -->
-  <rect x="1" y="1" width="858" height="218" rx="18" fill="none" stroke="url(#panelBorder)" stroke-width="1.5" filter="url(#panelGlow)"/>
-  <rect x="1" y="1" width="858" height="218" rx="18" fill="url(#panelBg)"/>
-  <rect x="1" y="1" width="858" height="3" rx="2" fill="url(#panelBorder)"/>
+  <!-- Card 1 -->
+  <rect x="22" y="26" width="192" height="166" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.22" stroke-width="1"/>
+  <text x="118" y="72" font-family="monospace" font-size="32" text-anchor="middle">📸</text>
+  <text x="118" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">Photography</text>
+  <text x="118" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Golden hour · Cinematic reels</text>
+  <text x="118" y="134" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Raw stories · Visual poetry</text>
+  <text x="118" y="166" font-family="monospace" font-size="9" fill="#78350f" text-anchor="middle">Lightroom · Natural light</text>
 
-  <!-- CARD 1: Photography -->
-  <rect x="24" y="28" width="190" height="164" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="119" y="72" font-family="monospace" font-size="32" text-anchor="middle">📸</text>
-  <text x="119" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">Photography</text>
-  <text x="119" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Golden hour</text>
-  <text x="119" y="133" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Cinematic reels</text>
-  <text x="119" y="148" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Raw stories</text>
-  <text x="119" y="166" font-family="monospace" font-size="9" fill="#92400e" text-anchor="middle">Lightroom · Phone cam</text>
+  <!-- Card 2 -->
+  <rect x="228" y="26" width="192" height="166" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.22" stroke-width="1"/>
+  <text x="324" y="72" font-family="monospace" font-size="32" text-anchor="middle">🎬</text>
+  <text x="324" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">Video Editing</text>
+  <text x="324" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">DaVinci Resolve · Lightroom</text>
+  <text x="324" y="134" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">CapCut Pro · VN</text>
+  <text x="324" y="166" font-family="monospace" font-size="9" fill="#78350f" text-anchor="middle">Color grading · Cinematic cuts</text>
 
-  <!-- CARD 2: Video Editing -->
-  <rect x="234" y="28" width="190" height="164" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="329" y="72" font-family="monospace" font-size="32" text-anchor="middle">🎬</text>
-  <text x="329" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">Video Editing</text>
-  <text x="329" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">DaVinci Resolve</text>
-  <text x="329" y="133" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Adobe Lightroom</text>
-  <text x="329" y="148" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">CapCut Pro · VN</text>
-  <text x="329" y="166" font-family="monospace" font-size="9" fill="#92400e" text-anchor="middle">Cinematic · Color grading</text>
+  <!-- Card 3 -->
+  <rect x="434" y="26" width="192" height="166" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.22" stroke-width="1"/>
+  <text x="530" y="72" font-family="monospace" font-size="32" text-anchor="middle">🎮</text>
+  <text x="530" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">Gaming</text>
+  <text x="530" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Valorant · RDR2 · GOW</text>
+  <text x="530" y="134" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">GTA5 · F1 · Assetto Corsa</text>
+  <text x="530" y="166" font-family="monospace" font-size="9" fill="#78350f" text-anchor="middle">Uncharted · NFS · Infamous</text>
 
-  <!-- CARD 3: Gaming -->
-  <rect x="444" y="28" width="190" height="164" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="539" y="72" font-family="monospace" font-size="32" text-anchor="middle">🎮</text>
-  <text x="539" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">Gaming</text>
-  <text x="539" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Valorant · RDR2</text>
-  <text x="539" y="133" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">God of War · GTA5</text>
-  <text x="539" y="148" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">F1 · Assetto Corsa</text>
-  <text x="539" y="166" font-family="monospace" font-size="9" fill="#92400e" text-anchor="middle">Uncharted · NFS · Infamous</text>
-
-  <!-- CARD 4: Vibe -->
-  <rect x="654" y="28" width="184" height="164" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.25" stroke-width="1"/>
-  <text x="746" y="72" font-family="monospace" font-size="32" text-anchor="middle">🎧</text>
-  <text x="746" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">The Vibe</text>
-  <text x="746" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">3am lo-fi sessions</text>
-  <text x="746" y="133" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Golden hour shoots</text>
-  <text x="746" y="148" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Ships before breakfast</text>
-  <text x="746" y="166" font-family="monospace" font-size="9" fill="#92400e" text-anchor="middle">Jack of all trades 🃏</text>
+  <!-- Card 4 -->
+  <rect x="640" y="26" width="200" height="166" rx="14" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.22" stroke-width="1"/>
+  <text x="740" y="72" font-family="monospace" font-size="32" text-anchor="middle">🎧</text>
+  <text x="740" y="100" font-family="monospace" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">The Vibe</text>
+  <text x="740" y="118" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">3am lo-fi sessions</text>
+  <text x="740" y="134" font-family="monospace" font-size="10" fill="#d97706" text-anchor="middle">Golden hour shoots 🌅</text>
+  <text x="740" y="166" font-family="monospace" font-size="9" fill="#78350f" text-anchor="middle">Ships before breakfast ☕</text>
 </svg>
 
 </div>
@@ -449,7 +535,7 @@
 ---
 
 <!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║     BLOCK 9 — DYNAMIC FOOTER             ║ -->
+<!-- ║     BLOCK 9 — FOOTER                     ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 
 <h2 align="center">💬 &nbsp; Dev Thought of the Day</h2>
@@ -457,14 +543,6 @@
 <div align="center">
 
 ![Random Dev Joke](https://readme-jokes.vercel.app/api?theme=dark&bgColor=%230d1117&borderColor=%23f59e0b&qColor=%23f59e0b&aColor=%23fbbf24&textColor=%23e5c687&codeColor=%23d97706)
-
-</div>
-
-<br/>
-
-<div align="center">
-
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
 
 </div>
 
